@@ -1,0 +1,74 @@
+/* Def */
+body {
+  margin: 0;
+  font-family: Arial;
+  transition: 0.3s;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* Head */
+header {
+  text-align: center;
+  padding: 30px;
+  background: #1a1a1a;
+}
+
+input {
+  padding: 10px;
+  width: 60%;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* card grid */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* card */
+.card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #2a2a2a;
+}
+
+/* links */
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+/* FAHH mode */
+.light {
+  background: #f5f5f5;
+  color: black;
+}
+
+.light header {
+  background: #ffffff;
+}
+
+.light .card {
+  background: white;
+  color: black;
+}
