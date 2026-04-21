@@ -1,4 +1,4 @@
-// toggle EMO mode
+// 🌙 다크 모드
 const btn = document.getElementById("toggleTheme");
 
 btn.addEventListener("click", () => {
@@ -12,7 +12,7 @@ btn.addEventListener("click", () => {
 });
 
 
-// search filter
+// 🔍 검색 필터
 const search = document.getElementById("search");
 const cards = document.querySelectorAll(".card");
 
@@ -27,5 +27,28 @@ search.addEventListener("input", () => {
     } else {
       card.style.display = "none";
     }
+  });
+});
+
+
+// ⚡ 로딩 제거
+window.addEventListener("load", () => {
+  const loading = document.getElementById("loading");
+
+  loading.style.opacity = "0";
+
+  setTimeout(() => {
+    loading.style.display = "none";
+  }, 500);
+});
+
+
+// 💥 카드 클릭 효과
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.style.transform = "scale(0.98)";
+    setTimeout(() => {
+      card.style.transform = "";
+    }, 150);
   });
 });
