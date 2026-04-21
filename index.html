@@ -1,7 +1,49 @@
-<h1>🔥 My Project Hub</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My unemployment footage Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-<h2>Programming shi</h2>
-<a href="html/project1/index.html">▶ Project 1 실행</a>
+<body>
 
-<h2>Electronic shi</h2>
-<a href="electronics/project1.zip">⬇ Download</a>
+<header>
+  <h1>🔥 My Project Hub</h1>
+  <p>HTML / Electronics / Coding Projects</p>
+
+  <input type="text" id="search" placeholder="searching projects...">
+
+  <button id="toggleTheme">🌙 Dark Mode</button>
+</header>
+
+<main id="projectGrid">
+
+  <div class="card" data-name="calculator html project">
+    <h2>Whiteboard</h2>
+    <p>HTML whiteboard project</p>
+    <a href="html/project1/index.html">Open</a>
+  </div>
+
+  <div class="card" data-name="esp32 sensor electronics">
+    <h2>⚡ ESP32 Sensor</h2>
+    <p>temp sensor proj coming soon...</p>
+    <a href="electronics/project1.html">Open</a>
+  </div>
+
+  <div class="card" data-name="game html fun">
+    <h2>🎮 Mini Game</h2>
+    <p>simple web games coming soon...</p>
+    <a href="#">Open</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>Made by Root -sabu ⚡</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
