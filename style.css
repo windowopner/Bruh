@@ -1,23 +1,20 @@
-/* 🌌 배경 */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-  overflow-x: hidden;
 
   background: linear-gradient(-45deg, #0f0f0f, #111827, #0a0a0a, #1f2937);
   background-size: 400% 400%;
   animation: bgMove 10s ease infinite;
 }
 
-/* 배경 애니메이션 */
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* 🔥 로딩 */
+/* 로딩 */
 #loading {
   position: fixed;
   inset: 0;
@@ -28,54 +25,38 @@ body {
   z-index: 9999;
 }
 
-/* 🧊 헤더 (글래스) */
+/* 헤더 */
 header {
   text-align: center;
   padding: 40px 20px;
-
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* 🔍 검색창 */
+/* 검색 */
 input {
   padding: 12px;
   width: 60%;
   margin-top: 15px;
-
   border-radius: 12px;
   border: none;
   outline: none;
-
   background: rgba(255,255,255,0.1);
   color: white;
-
-  backdrop-filter: blur(10px);
 }
 
 /* 버튼 */
 button {
   margin-top: 10px;
   padding: 10px 16px;
-
   border: none;
   border-radius: 12px;
   cursor: pointer;
-
   background: #6366f1;
   color: white;
-
-  transition: 0.2s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  background: #4f46e5;
-}
-
-/* 📦 카드 그리드 */
+/* 카드 */
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -83,7 +64,6 @@ main {
   padding: 30px;
 }
 
-/* 💎 글래스 카드 */
 .card {
   padding: 20px;
   border-radius: 16px;
@@ -93,56 +73,59 @@ main {
 
   border: 1px solid rgba(255,255,255,0.1);
 
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
 
-  transform-style: preserve-3d;
+  animation: fadeUp 0.6s ease;
 }
 
-/* hover 3D 효과 */
 .card:hover {
-  transform: perspective(800px) rotateX(5deg) rotateY(-5deg) scale(1.05);
-  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
 }
 
-/* 링크 */
-a {
-  display: inline-block;
-  margin-top: 10px;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
+a {
   color: #38bdf8;
   text-decoration: none;
 }
 
-/* ✨ 등장 애니메이션 */
-.card {
-  animation: fadeUp 0.6s ease;
+/* 모달 */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 9999;
 }
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.modal-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+
+  text-align: center;
+
+  animation: pop 0.3s ease;
 }
 
-/* 🌙 라이트 모드 */
-.light {
-  background: #f5f5f5;
-  color: black;
+@keyframes pop {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* 📱 모바일 */
-@media (max-width: 600px) {
-  input {
-    width: 90%;
-  }
-
-  main {
-    grid-template-columns: 1fr;
-  }
+#closeBtn {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
 }
