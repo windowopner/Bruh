@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My unemployment footage Hub</title>
+  <title>My Project Hub</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- 🔥 로딩 화면 -->
+<div id="loading">
+  <h2>Loading...</h2>
+</div>
+
 <header>
   <h1>🔥 My Project Hub</h1>
   <p>HTML / Electronics / Coding Projects</p>
 
-  <input type="text" id="search" placeholder="searching projects...">
+  <input type="text" id="search" placeholder="프로젝트 검색...">
 
   <button id="toggleTheme">🌙 Dark Mode</button>
 </header>
@@ -21,29 +28,31 @@
 <main id="projectGrid">
 
   <div class="card" data-name="calculator html project">
-    <h2>Whiteboard</h2>
-    <p>HTML whiteboard project</p>
+    <h2>💻 Calculator</h2>
+    <p>HTML 계산기 프로젝트</p>
     <a href="html/project1/index.html">Open</a>
   </div>
 
   <div class="card" data-name="esp32 sensor electronics">
     <h2>⚡ ESP32 Sensor</h2>
-    <p>temp sensor proj coming soon...</p>
+    <p>온도 센서 프로젝트</p>
     <a href="electronics/project1.html">Open</a>
   </div>
 
   <div class="card" data-name="game html fun">
     <h2>🎮 Mini Game</h2>
-    <p>simple web games coming soon...</p>
+    <p>간단한 웹 게임</p>
     <a href="#">Open</a>
   </div>
 
 </main>
 
 <footer>
-  <p>Made by Root -sabu ⚡</p>
+  <p>Made by Root ⚡</p>
 </footer>
 
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
