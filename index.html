@@ -3,29 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Hub Pro</title>
+  <title>Project Hub</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- 🔥 로딩 -->
 <div id="loading">Loading...</div>
 
 <header>
-  <h1>🔥 Project Hub Pro</h1>
+  <h1>🔥 Project Hub</h1>
+
   <input id="search" placeholder="Search projects...">
 </header>
 
 <main>
 
   <div class="card" data-url="html/project1/index.html">
-    <h2>💻 Calculator</h2>
+    <h2>Calculator</h2>
     <p>HTML App</p>
   </div>
 
   <div class="card" data-url="electronics/project1.html">
-    <h2>⚡ ESP32 Sensor</h2>
+    <h2>ESP32 Sensor</h2>
     <p>IoT Project</p>
   </div>
 
@@ -33,14 +35,16 @@
 
 <!-- 🚀 앱 뷰어 -->
 <div id="viewer">
+
   <div id="topbar">
     <span id="back">⬅ Back</span>
     <span id="title"></span>
   </div>
 
   <iframe id="frame"></iframe>
+
 </div>
 
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
