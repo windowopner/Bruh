@@ -421,19 +421,19 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const placeholderSummary = "Coming soon.";
-  const placeholderTags = ["Coming soon", "In progress", "Update pending"];
+  const placeholderTags = ["In progress..", "Coming soon", "Coming soon"];
   const archiveData = rawArchiveData.map((category) => ({
     ...category,
-    summary: placeholderSummary,
+    summary: "Coming soon",
     projects: category.projects.map((project) => ({
       ...project,
-      tagline: placeholderSummary,
-      enterUrl: project.enterUrl || category.rootUrl || "",
+      title: "In progress..",
+      tagline: "Coming soon",
+      enterUrl: "",
       versions: project.versions.map((version) => ({
         ...version,
         state: "Coming soon",
-        summary: "This branch is being prepared. Coming soon.",
+        summary: "Coming soon",
         tags: placeholderTags,
         runUrl: "",
         downloadUrl: "",
@@ -596,7 +596,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
 
                 <div class="stage-actions">
-                  <button type="button" class="stage-action primary" data-action="enter">
+                  <button
+                    type="button"
+                    class="stage-action primary is-disabled"
+                    data-action="enter"
+                    aria-disabled="true"
+                  >
                     Enter branch
                   </button>
                   <button type="button" class="stage-action" data-action="run">
@@ -779,7 +784,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (enterButton) {
-      enterButton.dataset.url = project.enterUrl || category.rootUrl || "";
+      enterButton.dataset.url = "";
       enterButton.dataset.label = project.title;
     }
 
@@ -932,18 +937,13 @@ document.addEventListener("DOMContentLoaded", () => {
           const label = button.dataset.label || "Selection";
 
           if (action === "enter") {
-            if (!url) {
-              showToast(`${label} is coming soon.`);
-              return;
-            }
-
-            openViewerWithUrl(url, label);
+            showToast("Coming soon");
             return;
           }
 
           if (action === "run") {
             if (!url) {
-              showToast(`${label} preview is coming soon.`);
+              showToast(`${label} is not wired for web preview yet.`);
               return;
             }
 
@@ -952,7 +952,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
 
           if (!url) {
-            showToast(`${label} download is coming soon.`);
+            showToast(`${label} has no download file yet.`);
             return;
           }
 
