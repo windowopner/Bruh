@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./assets/readme-hero.svg" alt="Live Archive hero" width="100%" />
-</p>
+
 
 <h1 align="center">UNEMPLOYED-PROJECTS-2026</h1>
 
