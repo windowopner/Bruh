@@ -1,6 +1,6 @@
 
 
-<h1 align="center">UNEMPLOYED-PROJECTS-2026</h1>
+<h1 align="center">Project Hub</h1>
 
 <p align="center">
   A branching neon archive for projects, subprojects, and version trails.
